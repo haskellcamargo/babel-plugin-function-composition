@@ -1,0 +1,9 @@
+{
+  "name": "babel-plugin-function-composition",
+  "version": "0.1.0",
+  "description": "Babel plugin to compose functions with piping using the & operator",
+  "main": "lib/index.js",
+  "repository": "https://github.com/haskellcamargo/babel-plugin-function-composition.git",
+  "author": "Marcelo Camargo <marcelocamargo@linuxmail.org>",
+  "license": "MIT"
+}
