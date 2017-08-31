@@ -9,8 +9,14 @@ export default ({ types: t }) => ({
                 return;
             }
 
-            const args = t.isSequenceExpression(path.node.left) ? path.node.left.expressions : [path.node.left];
-            path.replaceWith(t.callExpression(path.node.right, args));
+            const lambda = t.arrowFunctionExpression(
+                [t.restElement(t.identifier('args'))],
+                t.callExpression(path.node.right, [
+                    t.callExpression(path.node.left, [t.spreadElement(t.identifier('args'))])
+                ])
+            );
+
+            path.replaceWith(lambda);
         }
     }
 });
