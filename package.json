@@ -5,5 +5,30 @@
   "main": "lib/index.js",
   "repository": "https://github.com/haskellcamargo/babel-plugin-function-composition.git",
   "author": "Marcelo Camargo <marcelocamargo@linuxmail.org>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/index.js -o lib/index.js",
+    "watch-build": "npm run build -- -w",
+    "test": "mocha --compilers js:babel-register",
+    "watch-test": "npm test -- -w"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "pipe",
+    "function",
+    "functional programming",
+    "function composition"
+  ],
+  "bugs": {
+    "url": "https://github.com/haskellcamargo/babel-plugin-function-composition/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-register": "6.26.0",
+    "chai": "4.1.1",
+    "mocha": "3.5.0"
+  }
 }
