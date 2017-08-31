@@ -23,7 +23,7 @@ const add5AndMul5 = (...args) => multiply(5)(add(5)(...args));
 
 ## Disabling in current scope
 
-If you want to use the original pipe operator, you can disable this plugin in
+If you want to use the original bitwise and operator, you can disable this plugin in
 current scope (and it children scopes) using `'no composition` directive.
 
 ## Installation
