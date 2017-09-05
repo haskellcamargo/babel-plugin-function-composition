@@ -1,5 +1,7 @@
 # babel-plugin-function-composition
 
+<a href="https://app.codesponsor.io/link/osmbVLutaA7HXKYJpSN5uQYQ/haskellcamargo/babel-plugin-function-composition" rel="nofollow"><img src="https://app.codesponsor.io/embed/osmbVLutaA7HXKYJpSN5uQYQ/haskellcamargo/babel-plugin-function-composition.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+
 This plugin is made to work with point-free (tacit) functional programming by composing functions
 over piping. It is inspired by the work of [babel-plugin-pipe-operator-curry](https://github.com/Swizz/babel-plugin-pipe-operator-curry),
 but with a very different purpose, with focus on omitting arguments. I've overloaded the operator `&` for that. You
