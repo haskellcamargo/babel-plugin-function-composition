@@ -11,10 +11,11 @@ export default ({ types: t }) => ({
 
             const lambda = t.arrowFunctionExpression(
                 [t.restElement(t.identifier('args'))],
-                t.callExpression(path.node.right, [
-                    t.callExpression(path.node.left, [t.spreadElement(t.identifier('args'))])
-                ])
-            );
+                t.callExpression(t.parenthesizedExpression(path.node.right), [
+                    t.callExpression(
+                        t.parenthesizedExpression(path.node.left),
+                        [t.spreadElement(t.identifier('args'))])
+                ]));
 
             path.replaceWith(lambda);
         }
